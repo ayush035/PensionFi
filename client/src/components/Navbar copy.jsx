@@ -1,7 +1,7 @@
 import React from "react";
 import { HiMenuAlt4 } from "react-icons/hi";
 import { AiOutlineClose } from "react-icons/ai";
-import { Link } from "react-router-dom";
+
 import logo from "../assets/logoblack.png";
 
 const NavBarItem = ({ title, classprops }) => (
@@ -16,21 +16,12 @@ const Navbar = () => {
       <div className="md:flex-[0.5] flex-initial justify-center items-center">
         <img src={logo} alt="logo" className="w-32 cursor-pointer" />
       </div>
-      <ul className="text-white md:flex hidden  items-center flex-initial">
-        <Link to="/">Home</Link>
-        <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
-        <Link to="/investments">Investments</Link>
-        <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
-        <Link to="/create">Create-Profile</Link>
-        <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
-        <Link to="/deposit">Deposit-Fund</Link>
-        <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
-        <Link to="/about">About</Link>
-        <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
+      <ul className="text-white md:flex hidden list-none flex-row justify-between items-center flex-initial">
+        {["Create Account", "Deposit Fund", "Tutorials", "Investments"].map((item, index) => (
+          <NavBarItem key={item + index} title={item} />
+        ))}
         <li className="bg-[#2952e3] py-2 px-7 mx-4 rounded-full cursor-pointer hover:bg-[#2546bd]">
-          <a href="https://discord.com/" target="_blank" rel="noreferrer">
-            Join our community
-          </a>
+          Join our community
         </li>
       </ul>
       <div className="flex relative">
