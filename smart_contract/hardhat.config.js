@@ -1,11 +1,26 @@
-require('@nomiclabs/hardhat-waffle');
+require("@nomiclabs/hardhat-waffle");
+require('dotenv').config();
 
 module.exports = {
-  solidity: '0.8.0',
+  defaultNetwork: "hardhat",
   networks: {
-    ropsten: {
-      url: 'https://eth-ropsten.alchemyapi.io/v2/z4WpA8UKgqnwbTYmrZu15yCOiijBKaRv',
-      accounts: ['2f99db8cdb04655028eee1dc98230925202f6b3e010e43fad2883b4bea90a1a3'],
+    hardhat: {
+      chainId: 1337
     },
+   
+    mumbai: {
+      url: "https://polygon-mumbai.g.alchemy.com/v2/odpZQIbE3xtAii8qMNePX-0M6fyB8G0V", 
+      accounts: [process.env.PRIVATE_KEY],
+    },
+
   },
+  solidity: {
+    version: "0.8.9",
+    settings: {
+      optimizer: {
+        enabled: true,
+        runs: 200
+      }
+    }
+  }
 };

@@ -1,15 +1,12 @@
-import React from "react";
-import { Navbar, Footer, } from "../components";
+import { Navbar, Footer, MintProfile } from "../components";
 
-const create = () => (
-  <div className="w-full gradient-bg-welcome">
+const Create = () => (
+  <div className="w-full gradient-bg-transactions">
     <Navbar />
-    <div className="text-4xl text-center text-white font-bold mt-10 mb-20">
-      <h1> Account Creation Page </h1>
-    </div>
+
+    <MintProfile />
     <Footer />
   </div>
 );
 
-export default create;
-
+export default Create;
