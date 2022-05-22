@@ -82,21 +82,16 @@ const Welcome = () => {
             Explore the world of web3 pension investment. Choose where to invest and see you retirement fund grow.
           </p>
           {!currentAccount && (
-            <>
-              <button
-                type="button"
-                onClick={connectWallet2}
-                className="flex flex-row justify-center items-center my-5 bg-[#2952e3] p-3 rounded-full cursor-pointer hover:bg-[#2546bd]"
-              >
-                <AiFillPlayCircle className="text-white mr-2" />
-                <p className="text-white text-base font-semibold">
-                  Connect Wallet
-                </p>
-              </button>
-              {/**
-              <button className="flex flex-row justify-center items-center my-5 bg-[#2952e3] p-3 rounded-full cursor-pointer hover:bg-[#2546bd]" type="button" onClick={connectWallet2}>Connect Wallet</button>
-               */}
-            </>
+            <button
+              type="button"
+              onClick={connectWallet2}
+              className="flex flex-row justify-center items-center my-5 bg-[#2952e3] p-3 rounded-full cursor-pointer hover:bg-[#2546bd]"
+            >
+              <AiFillPlayCircle className="text-white mr-2" />
+              <p className="text-white text-base font-semibold">
+                Connect Wallet
+              </p>
+            </button>
           )}
 
           <div className="p-3 flex justify-end items-start flex-col rounded-xl h-80 sm:w-120 w-3/4 my-5 eth-card .white-glassmorphism ">
@@ -126,7 +121,11 @@ const Welcome = () => {
         </div>
 
         <div className="md:flex-[0.5] flex-initial justify-center items-center mt-50">
-          <img src={logo1} alt="welcome" className="w-100 cursor-pointer mt-20 pt-20" />
+          <a target="_blank" href="https://staging-global.transak.com/?apiKey=b2499ea6-aafd-4737-9c55-42c0501e8331" rel="noreferrer">
+            <button className="flex flex-row h-20 text-2xl pl-10 pr-10 justify-center items-center my-5 bg-[#ffffff] p-3 rounded-full cursor-pointer hover:bg-[#2546bd]" type="button">Buy Crypto with local currency</button>
+
+          </a>
+          <img src={logo1} alt="welcome" className="w-100 cursor-pointer mt-10 pt-20" />
         </div>
       </div>
     </div>
