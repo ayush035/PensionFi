@@ -1,9 +1,12 @@
-import React from "react";
-import ReactDOM from "react-dom";
+import { Navbar, Footer, MintProfile } from "../components";
 
-ReactDOM.render(
-  <React.StrictMode>
-    <h1>Welcome to the create page deployed</h1>
-  </React.StrictMode>,
-  document.getElementById("root")
+const Create = () => (
+  <div className="w-full gradient-bg-transactions">
+    <Navbar />
+
+    <MintProfile />
+    <Footer />
+  </div>
 );
+
+export default Create;
