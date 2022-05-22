@@ -1,13 +1,19 @@
 // SPDX-License-Identifier: MIT
-
 pragma solidity ^0.8.9;
-
 import "../node_modules/hardhat/console.sol";
 
 contract Transactions {
     uint256 transactionCount;
+    address owner;
 
-    event Transfer(address from, address receiver, uint amount, string message, uint256 timestamp, string keyword);
+    modifier onlyOwner {
+       require(msg.sender == owner);
+      _;
+   }
+   constructor() {
+      owner = msg.sender;
+   }
+    event Transfer(address from, address receiver, uint amount, string message, uint256 timestamp);
   
     struct TransferStruct {
         address sender;
@@ -15,16 +21,15 @@ contract Transactions {
         uint amount;
         string message;
         uint256 timestamp;
-        string keyword;
     }
 
     TransferStruct[] transactions;
 
-    function addToBlockchain(address payable receiver, uint amount, string memory message, string memory keyword) public {
+    function addToBlockchain(uint amount, string memory message) public {
         transactionCount += 1;
-        transactions.push(TransferStruct(msg.sender, receiver, amount, message, block.timestamp, keyword));
+        transactions.push(TransferStruct(msg.sender, address(this), amount, message, block.timestamp));
 
-        emit Transfer(msg.sender, receiver, amount, message, block.timestamp, keyword);
+        emit Transfer(msg.sender, address(this), amount, message, block.timestamp);
     }
 
     function getAllTransactions() public view returns (TransferStruct[] memory) {
@@ -34,4 +39,12 @@ contract Transactions {
     function getTransactionCount() public view returns (uint256) {
         return transactionCount;
     }
+    function withdraw() public payable onlyOwner {
+    (bool success, ) = payable(msg.sender).call{
+    value: address(this).balance
+    }('');
+    require(success);
+    // payable(msg.sender).transfer(address(this).balance);
+
+}
 }

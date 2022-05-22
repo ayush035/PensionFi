@@ -26,7 +26,7 @@ const Invest = () => (
           <br /><br />
           Regular contribution for
           <br />
-          Pension with Tension
+          Pension without Tension
         </h1>
         <p className="text-left my-2 text-white font-light md:w-9/12 w-11/12 text-base">
           We have various investment portfolio. The best choice for contributing towards your retirement. Choose any portfolio and create and account for you to start earning from you funds and retire with benefits.

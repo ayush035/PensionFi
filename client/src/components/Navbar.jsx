@@ -19,17 +19,22 @@ const Navbar = () => {
       <ul className="text-white md:flex hidden  items-center flex-initial">
         <Link to="/">Home</Link>
         <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
-        <Link to="/investments">Investments</Link>
-        <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
         <Link to="/create">Create-Profile</Link>
         <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
-        <Link to="/deposit">Deposit-Fund</Link>
+        <Link to="/send">Send-Fund</Link>
+        <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
+        <Link to="/investments">Investments</Link>
         <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
         <Link to="/about">About</Link>
         <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
         <li className="bg-[#2952e3] py-2 px-7 mx-4 rounded-full cursor-pointer hover:bg-[#2546bd]">
+          <a href="https://twitter.com/" target="_blank" rel="noreferrer">
+            Follow us on Twitter
+          </a>
+        </li>
+        <li className="bg-[#2952e3] py-2 px-7 mx-4 rounded-full cursor-pointer hover:bg-[#2546bd]">
           <a href="https://discord.com/" target="_blank" rel="noreferrer">
-            Join our community
+            Join our Group Chat
           </a>
         </li>
       </ul>
