@@ -21,3 +21,12 @@ Want me to cover the project you've created? Send me an e-mail 👌
 
 ## Stay up to date with new projects
 New features will be introduced. stay connected on twitter @holyaustin
+## Login with Unstoppable Domain Integration - A web 3.0 SSO
+### Project Name - PensionFi
+### PR link to the public repo - https://github.com/holyaustin/PensionFi/pull/1
+### Recorded Video Demo of the integration - https://youtu.be/zbW5YNrutLU
+### Person of contact in case there are any questions - Ayush Gupta
+### (Email ID: ayushguptaknp2080@gmail.com)
+### Discord ID - Ayush1114#9642
+### Live Working URL : https://pension-fi.vercel.app/
+### UnstoppableDomain registered account email address - ayushguptaknp2080@gmail.com
