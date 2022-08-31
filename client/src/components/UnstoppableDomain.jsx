@@ -4,7 +4,8 @@ import { Button } from "react-bootstrap"
 
 const uauth = new UAuth({
     clientID: "ca047f44-91d0-42be-98b1-45557369cc19",
-    redirectUri: "http://localhost:3000"
+    redirectUri: "https://pension-fi.vercel.app/"
+
 })
 
 function UnstoppableDomain() {
