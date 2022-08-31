@@ -9,7 +9,7 @@ import Onboard from "@web3-onboard/core";
 import logo1 from "../assets/logowhite2.png";
 import { TransactionContext } from "../context/TransactionContext";
 import { shortenAddress } from "../utils/shortenAddress";
-
+import UnstoppableDomain from "./UnstoppableDomain";
 const coinbaseWalletSdk = coinbaseWalletModule();
 const walletConnect = walletConnectModule();
 const injected = injectedModule();
@@ -92,8 +92,9 @@ const Welcome = () => {
                 Connect Wallet
               </p>
             </button>
-          )}
 
+          )}
+          <UnstoppableDomain/>
           <div className="p-3 flex justify-end items-start flex-col rounded-xl h-80 sm:w-120 w-3/4 my-5 eth-card .white-glassmorphism ">
             <div className="flex justify-between flex-col w-full h-full">
               <div className="flex justify-between items-start">
